@@ -60,10 +60,8 @@ public class EG23 {
 			}
 		});
 		btnNewButton.setFont(new Font("Calibri", Font.PLAIN, 16));
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		
+		
 		btnNewButton.setBounds(143, 190, 184, 48);
 		frmCe.getContentPane().add(btnNewButton);
 		

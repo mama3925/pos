@@ -8,6 +8,11 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JCheckBox;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JComboBox;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
 
 public class Affect1 {
 
@@ -17,6 +22,7 @@ public class Affect1 {
 	private JTextField textField_2;
 	private JTextField textField_3;
 	private JTextField textField_4;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
 
 	/**
 	 * Launch the application.
@@ -111,7 +117,66 @@ public class Affect1 {
 		frmAffectplayer.getContentPane().add(chckbxNewCheckBox);
 		
 		JButton btnNewButton = new JButton("valider");
-		btnNewButton.setBounds(457, 343, 93, 23);
+		btnNewButton.setBounds(457, 274, 93, 23);
 		frmAffectplayer.getContentPane().add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("next");
+		
+		
+		
+		btnNewButton_1.setBounds(457, 219, 93, 23);
+		frmAffectplayer.getContentPane().add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("back");
+	
+		
+		
+		btnNewButton_2.setBounds(457, 160, 93, 23);
+		frmAffectplayer.getContentPane().add(btnNewButton_2);
+		
+		JLabel lblNewLabel_7 = new JLabel("Etudiant");
+		lblNewLabel_7.setBounds(392, 32, 54, 15);
+		frmAffectplayer.getContentPane().add(lblNewLabel_7);
+		
+		JLabel lblNewLabel_8 = new JLabel("1");
+		lblNewLabel_8.setBounds(457, 32, 54, 15);
+		frmAffectplayer.getContentPane().add(lblNewLabel_8);
+		
+		JButton btnNewButton_3 = new JButton("etape suivant(zone)");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ZoneAffect.ouvreZone(null);
+				
+			}
+		});
+		btnNewButton_3.setBounds(410, 322, 160, 33);
+		frmAffectplayer.getContentPane().add(btnNewButton_3);
+		
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("offensive");
+		buttonGroup.add(rdbtnNewRadioButton);
+		rdbtnNewRadioButton.setBounds(6, 160, 121, 23);
+		frmAffectplayer.getContentPane().add(rdbtnNewRadioButton);
+		
+		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("defensive");
+		buttonGroup.add(rdbtnNewRadioButton_1);
+		rdbtnNewRadioButton_1.setBounds(6, 205, 121, 23);
+		frmAffectplayer.getContentPane().add(rdbtnNewRadioButton_1);
+		
+		
+		
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int pv; 
+				pv= Integer.valueOf(lblNewLabel_8.getText());
+				if(pv < 20) lblNewLabel_8.setText(String.valueOf(pv+1));
+			}
+		});
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int pv; 
+				pv= Integer.valueOf(lblNewLabel_8.getText());
+				if(pv > 1) lblNewLabel_8.setText(String.valueOf(pv-1));
+			}
+		});
 	}
 }

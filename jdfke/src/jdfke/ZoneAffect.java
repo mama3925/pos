@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.BorderLayout;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class ZoneAffect {
 
@@ -14,7 +16,7 @@ public class ZoneAffect {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void ouvreZone(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -92,6 +94,11 @@ public class ZoneAffect {
 		frame.getContentPane().add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("+");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ListPlusHalle.OpenPlusHalle(null);
+			}
+		});
 		btnNewButton_1.setBounds(356, 74, 93, 23);
 		frame.getContentPane().add(btnNewButton_1);
 		
