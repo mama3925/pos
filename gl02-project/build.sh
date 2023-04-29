@@ -1,1 +1,0 @@
-sed -i 's/dev: true/dev: false/g' src/environment.ts
