@@ -3,27 +3,25 @@ package jdfke;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.JList;
-import java.awt.BorderLayout;
-import javax.swing.AbstractListModel;
-import java.awt.ScrollPane;
-import java.awt.Panel;
-import javax.swing.JScrollPane;
 import javax.swing.JPanel;
+import java.awt.BorderLayout;
+import javax.swing.JList;
+import javax.swing.AbstractListModel;
+import javax.swing.JScrollPane;
 import javax.swing.JButton;
 
-public class ListPlusHalle {
+public class ListMoinsHalle {
 
 	private JFrame frame;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void OpenPlusHalle(String[] args) {
+	public static void OpenMinusHalle(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ListPlusHalle window = new ListPlusHalle();
+					ListMoinsHalle window = new ListMoinsHalle();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -35,7 +33,7 @@ public class ListPlusHalle {
 	/**
 	 * Create the application.
 	 */
-	public ListPlusHalle() {
+	public ListMoinsHalle() {
 		initialize();
 	}
 
@@ -47,7 +45,7 @@ public class ListPlusHalle {
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		Panel panel = new Panel();
+		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, BorderLayout.WEST);
 		
 		JScrollPane scrollPane = new JScrollPane();

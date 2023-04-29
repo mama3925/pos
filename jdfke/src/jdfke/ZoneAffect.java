@@ -90,6 +90,11 @@ public class ZoneAffect {
 		frame.getContentPane().add(lblNewLabel_10);
 		
 		JButton btnNewButton = new JButton("-");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ListMoinsHalle.OpenMinusHalle(null);
+			}
+		});
 		btnNewButton.setBounds(199, 74, 93, 23);
 		frame.getContentPane().add(btnNewButton);
 		
