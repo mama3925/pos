@@ -1,9 +1,0 @@
-node_modules/
-dist/
-bin/
-save/
-.DS_Store
-.env
-test/tmp/
-.idea
-*.iml
