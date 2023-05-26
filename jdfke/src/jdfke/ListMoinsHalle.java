@@ -69,7 +69,7 @@ public class ListMoinsHalle {
 		JButton btnNewButton = new JButton("valider");
 		panel_1.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("melee");
+		JButton btnNewButton_1 = new JButton("retirer");
 		panel_1.add(btnNewButton_1);
 	}
 

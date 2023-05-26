@@ -138,5 +138,9 @@ public class ZoneAffect {
 		JButton btnNewButton_9 = new JButton("+");
 		btnNewButton_9.setBounds(356, 284, 93, 23);
 		frame.getContentPane().add(btnNewButton_9);
+		
+		JButton btnNewButton_10 = new JButton("melee");
+		btnNewButton_10.setBounds(443, 316, 93, 23);
+		frame.getContentPane().add(btnNewButton_10);
 	}
 }
